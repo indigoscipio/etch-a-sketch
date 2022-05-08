@@ -1,0 +1,26 @@
+:root {
+  --gridcontainer-width: 600px;
+  --gridcontainer-height: 600px;
+}
+
+.grid-item {
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+}
+
+.grid-container {
+  display: grid;
+  background-color: red;
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.row,
+.column,
+.cell {
+  width: var(--cell-width);
+  height: var(--cell-height);
+  background-color: green;
+  display: inline-block;
+}
