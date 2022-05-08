@@ -6,21 +6,21 @@
 .grid-item {
   width: 24px;
   height: 24px;
-  border: 1px solid black;
+  background-color: coral;
 }
 
 .grid-container {
-  display: grid;
-  background-color: red;
+  display: inline-grid;
+  background-color: gray;
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   grid-template-rows: repeat(var(--grid-rows), 1fr);
 }
 
-.row,
+/* .row,
 .column,
 .cell {
   width: var(--cell-width);
   height: var(--cell-height);
   background-color: green;
   display: inline-block;
-}
+} */

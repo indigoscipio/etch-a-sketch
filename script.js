@@ -9,24 +9,28 @@ function makeRows(cols, rows) {
     let newCell = document.createElement("div");
     gridContainer.appendChild(newCell).className = "grid-item";
   }
-  console.log(cols, rows);
+}
+
+gridContainer.addEventListener("mouseover", (e) =>{
+    console.log(e.target)
+})
 }
 
 //Default Grid
-function defaultGrid() {
-  makeRows(16);
-  makeColumns(16);
-}
+// function defaultGrid() {
+//   makeRows(16);
+//   makeColumns(16);
+// }
 
 //creates row
-function makeRows(row) {
-  for (r = 0; r < row; r++) {
-    let newRow = document.createElement("div");
-    newRow.setAttribute("class", "row");
-    // gridContainer.appendChild(newRow).className = "row";
-    gridContainer.appendChild(newRow);
-  }
-}
+// function makeRows(row) {
+//   for (r = 0; r < row; r++) {
+//     let newRow = document.createElement("div");
+//     newRow.setAttribute("class", "row");
+//     // gridContainer.appendChild(newRow).className = "row";
+//     gridContainer.appendChild(newRow);
+//   }
+// }
 
 // //creates column
 // function makeColumns(cell) {
