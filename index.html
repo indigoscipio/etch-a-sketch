@@ -9,6 +9,20 @@
   </head>
   <body>
     <header><h1>Etch a Sketch ✏</h1></header>
+    <div class="controls">
+      <button id="clear" class="button">Clear</button>
+      <button id="rainbow" class="button">Rainbow</button>
+      <button id="grid-line" class="button">Toggle Grid Lines</button>
+      <div class="color-input-container">
+        <label for="color">Select color:</label>
+        <input type="color" id="color-picker" />
+      </div>
+      <div class="grid-slider-container">
+        <label for="color">Adjust grid:</label>
+        <input type="range" id="grid-slider" min="8" max="48" value="8" />
+        <span id="grid-size-indicator">8 x 8</span>
+      </div>
+    </div>
     <div class="grid-container" id="grid-container"></div>
     <footer>
       by <a href="https://www.samueloktavianus.com"> Samuel Oktavianus</a>

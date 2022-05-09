@@ -1,19 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+
 :root {
   --gridcontainer-width: 600px;
   --gridcontainer-height: 600px;
+  --cell-width: calc(var(--gridcontainer-width) / 24px);
+  --cell-height: calc(var(--gridcontainer-height) / 24px);
 }
 
+body {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+button,
+input,
+a {
+  font-family: inherit;
+}
+
+/* if its 16x16: 600/16
+if its 24/24: 600/24 */
 .grid-item {
-  width: 24px;
-  height: 24px;
+  width: var(--cell-width);
+  height: var(--cell-height);
   background-color: coral;
+}
+
+.grid-item.activeborder {
+  border: 1px solid black;
 }
 
 .grid-container {
   display: inline-grid;
+  width: var(--gridcontainer-width);
+  height: var(--gridcontainer-height);
   background-color: gray;
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.red {
+  background-color: red;
 }
 
 /* .row,
